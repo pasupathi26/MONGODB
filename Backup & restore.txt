@@ -1,0 +1,27 @@
+Backup and restore
+
+1. open cmd window and give mongo path 
+
+         cd C:\Program Files\MongoDB\Server\3.2\bin
+2. then enter "mongo" click enter then it will connect mongodb
+
+3. open cmd window as admin , then enter path
+
+      cd C:\Program Files\MongoDB\Server\3.2\bin
+4. then enter "mongodumb", it will create folder and store all db
+
+5. if want take backup particular db means enter like this
+
+     mongodump --db "db name"
+
+Restore
+-----------------------
+
+1. open cmd window as admin , then enter path
+
+      cd C:\Program Files\MongoDB\Server\3.2\bin
+2. Then enter "mongorestore" cmd then restore all db
+
+3. but if we want restore particular db means 
+
+    enter "mongorestore --db example(db name) dump(after bin backup foldername)/example(dbfolder name)
