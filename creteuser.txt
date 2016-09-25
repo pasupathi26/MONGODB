@@ -1,0 +1,17 @@
+
+Create User:
+
+1. db.createuser(
+{
+user:"pasupathi",
+pwd:"rabiksha",
+roles:[ {
+role:"read/readwrite",
+db:"example"
+]
+}
+})
+
+2. db.getUser("pasupathi")
+
+3.db.auth("pasupathi","rabiksha")
