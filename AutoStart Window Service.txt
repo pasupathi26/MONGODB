@@ -1,0 +1,29 @@
+1. Install the "mongodb-win32-x86_64-3.2.4-signed.msi" file
+2.After getting messge for Installed  need to check path in  "C: ".
+3. Open cmd window create one folder in " C: " ( foldername: data)
+	ex: mkdir data
+4. Inside data folder create two folder 
+  a. db
+  b. log
+5.Create one .cnf("mongod.cfg") file inside the bin folder and write  below lines
+    
+          systemLog:
+    destination: file
+    path: c:\data\log\mongod.log
+storage:
+    dbPath: c:\data\db
+
+6. Open cmd window on admin mode and copy whole 7th step query and  execute on admin cmd window
+
+7.  sc.exe create MongoDB binPath= "C:\Program Files\MongoDB\Server\3.2\bin\mongod.exe --service --config=\"C:\Program Files\MongoDB\Server\3.2\bin\mongod.cfg\"" DisplayName= "MongoDB" start= "auto"
+
+7.a: u will get message "[SC] CreateService SUCCESS"
+8. then enter "  net start MongoDB " on admin cmd window
+
+9.To stop the MongoDB service, use the following command:
+
+net stop MongoDB
+
+10. To remove the MongoDB service, first stop the service and then run the following command:
+
+sc.exe delete MongoDB

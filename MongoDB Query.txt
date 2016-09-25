@@ -1,0 +1,41 @@
+MongoDB Query
+
+1. Check Status
+db.stats()
+
+2.Check all DB
+show dbs
+
+3. Create DB and also Change other DB ( same query)
+Use (DB Name)
+
+3.Check current DB
+db
+
+4. Check all Collection(Table)
+show collections
+
+5. Create Collections(table)\
+db.createCollection("Login");
+
+6. Select Query
+db.Login.find()
+
+7. Particular Select Query
+db.Login.find({UserName:'Pasupathi'})
+
+8. Insert Query
+db.Login.insert({UserName:'Ravikannappan',Password:'yadav'})
+
+9. Create User Authentication
+   
+        db.createUser( { user:"pasupathi",pwd:"rabiksha",
+          roles:[{role:"read/readwrite",db:"example"}]})
+
+10. Check Authentication
+
+   db.auth("pasupathi","rabiksha");
+
+11. Get User
+  
+     db.getUser("pasupathi");

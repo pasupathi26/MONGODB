@@ -1,0 +1,14 @@
+1. Install the "mongodb-win32-x86_64-3.2.4-signed.msi" file
+2.After getting messge for Installed  need to check path in  "C: ".
+3. Open cmd window create one folder in " C: " ( foldername: data)
+	ex: mkdir data
+4. Inside data folder create two folder 
+  a. db
+  b. log
+
+4. need to go inside "C:\Program Files\MongoDB\Server\3.2\bin "
+5. drag and drop that cmd window from Mongod.exe  & click enter
+6. click on Mongod.exe
+7. click on Mongo.exe
+
+continue ur DB code
