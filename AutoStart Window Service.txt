@@ -12,11 +12,8 @@ systemLog:
     path: c:\data\log\mongod.log
 storage:
     dbPath: c:\data\db
-processManagement:
-    fork: true
 security:
     authorization: enabled
-    auth: true
 
 6. Open cmd window on admin mode and copy whole 7th step query and  execute on admin cmd window
 
