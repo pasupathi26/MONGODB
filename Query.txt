@@ -160,3 +160,44 @@ public partial class _Default : System.Web.UI.Page
   </appSettings>
 
 </configuration>
+
+-----------------------------------------
+
+ MongoServer _server;
+    MongoDatabase _db;
+    MongoClient _client;
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        _client = new MongoClient("mongodb://pasupathi:pasupathiadvaitam@37.220.110.148:27017/ApplePush/");
+        _server = _client.GetServer();
+        _db = _server.GetDatabase("ApplePush");
+        try
+        {
+            _client.GetServer().Connect();
+            List<TokenDetails> s = _db.GetCollection<TokenDetails>("Token_Details").FindAll().ToList();
+            _client.GetServer().Disconnect();
+        }
+        catch (Exception ex)
+        {
+
+        }
+
+    }
+    public class TokenDetails
+    {
+        [BsonElement("_id")]
+        public object _id { get; set; }
+
+        [BsonElement("OpCode")]
+        public string OpCode { get; set; }
+
+        [BsonElement("TokenNumber")]
+        public string TokenNumber { get; set; }
+
+        [BsonElement("Status")]
+        public string Status { get; set; }
+
+        [BsonElement("CreatedDate")]
+        public string CreatedDate { get; set; }
+    }
