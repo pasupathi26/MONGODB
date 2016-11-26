@@ -1,0 +1,12 @@
+
+1. after open cmd window
+2. type cmd window in : cd c:\programfiles\MongoDB\Server\3.2
+      (cd space that mongo db files path upto bin folder)
+3. then type without cd in "mongo 185.122.206.148:27017/ApplePush"
+       (mongo  installedipaddress:port/Database)
+
+then u will get shell cmd
+
+1. then give your root auth
+
+           db.auth("pasupathi","rabiksha")
