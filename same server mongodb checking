@@ -1,0 +1,13 @@
+
+1. after open cmd window
+2. type cmd window in : cd c:\programfiles\MongoDB\Server\3.2
+      (cd space that mongo db files path upto bin folder)
+3. then type without cd in "mongo.exe"
+
+then u will get shell cmd
+
+next switch your databse  (ex: type  use ApplePush)
+
+1. then give your root auth
+
+           db.auth("pasupathi","rabiksha")
