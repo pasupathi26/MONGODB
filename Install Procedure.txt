@@ -1,6 +1,6 @@
 1. Install the "mongodb-win32-x86_64-3.2.4-signed.msi" file
 2.After getting messge for Installed  need to check path in  "C: ".
-3. Open cmd window create one folder in " C: " ( foldername: data)
+3. Open cmd window create one folder in ("cd\") " C: " ( foldername: data)
 	ex: mkdir data
 4. Inside data folder create two folder 
   a. db
